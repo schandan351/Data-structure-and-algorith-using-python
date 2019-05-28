@@ -10,7 +10,10 @@ class Stack(object):
         self.items.append(item)
     
     def pop(self):
-        return self.items.pop()
+        if(self.items==[]):
+            return ("no elements in the list")
+        else:
+            return self.items.pop()
     
     def top(self):
         return self.items[len(self.items)-1]
@@ -21,5 +24,7 @@ s.push(8)
 s.push(9)
 print(s.isempty())
 print(s.items)
+print(s.pop())
+print(s.pop())
 print(s.pop())
 print(s.items)
